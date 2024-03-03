@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors(
     {
         origin:["https://payment-front-end.vercel.app"],
-        methods:["POST","GET","DELETE"],
+        methods:["POST","GET"],
         credentials:true,
     }
 ));
