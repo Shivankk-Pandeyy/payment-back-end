@@ -9,7 +9,7 @@ const MYPLAN = require('../Schema/MyPlans');
 //HOMEPAGE GET REQUEST
 const getAllProducts=async(req,res)=>{
     try{
-        return res.status(200).json({message:"Router Succesful"})
+        return res.status(200).json({"Router Succesful"})
     }
     catch(err){
         console.log(err);
