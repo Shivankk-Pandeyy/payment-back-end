@@ -6,6 +6,7 @@ const PORT=process.env.PORT;
 const products_routes=require('./Routes/Products');
 const admin_routes=require("./Routes/Admin_Route");
 //MIDDLEWARE
+app.use(express.json());
 app.use(express.json());app.use(cors({
   origin: 'https://payment-front-end.vercel.app', // Allow only this origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'],      // Allowed HTTP methods
