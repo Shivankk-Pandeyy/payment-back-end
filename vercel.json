@@ -1,11 +1,21 @@
 {
-    "version": 2,
-    "name": "RHINO REPS",
-    "builds": [
-       { "src": "*.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-       { "src": "/(.*)", 
-       "dest": "/" }
-    ]
- }
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://payment-front-end.vercel.app"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET,POST,PUT,DELETE"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ]
+}
