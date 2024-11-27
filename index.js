@@ -7,7 +7,8 @@ const products_routes=require('./Routes/Products');
 const admin_routes=require("./Routes/Admin_Route");
 //MIDDLEWARE
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: 'https://payment-front-end.vercel.app', methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', credentials: true }));
+
 //FOR PDF FILES MADE STATIC
 app.use("/files",express.static("files"));
 //MIDDLEWARE FOR ROUTER
