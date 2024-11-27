@@ -1,19 +1,23 @@
 {
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/api/(.*)",  // Match all API routes under /api
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://payment-front-end.vercel.app"
+          "value": "https://payment-front-end.vercel.app"  // Allow requests only from your frontend
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "GET,POST,PUT,DELETE"
+          "value": "GET, POST, PUT, DELETE, OPTIONS"  // List all HTTP methods you want to allow
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization"
+          "value": "Content-Type, Authorization"  // Specify which headers are allowed in the request
+        },
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "true"  // Allow cookies or authorization headers (if needed)
         }
       ]
     }
